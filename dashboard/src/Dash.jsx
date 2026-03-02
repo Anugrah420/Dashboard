@@ -11,44 +11,17 @@ const Dashboard = ({user}) => {
   }
 
   return (
-<<<<<<< HEAD
     <div className="dashboard-container">
       
       {/* Header */}
-=======
-    <div className="layout">
-      
-      
-      <div className="sidebar">
-        <h2 className="logo">🏥 MedCare</h2>
-
-        <ul className="menu">
-          <li>Dashboard</li>
-          <li>Patients</li>
-          <li>Doctors</li>
-          <li>Appointments</li>
-          <li>Admissions</li>
-          <li>Billing</li>
-          <li>Pharmacy</li>
-          <li>Laboratory</li>
-          <li>Reports</li>
-        </ul>
-      </div>
-      {/* User Info Card */}
-      <div className="main-content">
-        {/* Header */}
->>>>>>> upstream/main
       <div className="dashboard-header">
         <h2>Welcome, {data.name || data.user?.name}</h2>
         <button className="logout-btn" onClick={handleLogout}>
           Logout
         </button>
       </div>
-<<<<<<< HEAD
 
       {/* User Info Card */}
-=======
->>>>>>> upstream/main
       <div className="card">
         <h3>Profile Information</h3>
         <div className="info-row">
@@ -64,10 +37,6 @@ const Dashboard = ({user}) => {
           <span>{data.user_id || data.user?.id}</span>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> upstream/main
 
     </div>
   );

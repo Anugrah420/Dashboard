@@ -18,9 +18,4 @@ def get_current_user(
         return response.user
 
     except Exception:
-<<<<<<< HEAD
         raise HTTPException(status_code=401, detail="Token invalid or expired")
-=======
-        raise HTTPException(status_code=401, detail="Token invalid or expired")
-    
->>>>>>> upstream/main
