@@ -14,9 +14,13 @@ class UserCreate(BaseModel):
 
 class UserLogin(BaseModel):
     email: EmailStr
+<<<<<<< HEAD
     password: str
 
 class dataInput(BaseModel):
     num1:float
     num2:float
 
+=======
+    password: str
+>>>>>>> upstream/main
