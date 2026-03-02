@@ -1,8 +1,17 @@
+
+from mlmodel import get_prediction
+from models import dataInput
 from fastapi import FastAPI
 from login import router as auth_router
 from fastapi.middleware.cors import CORSMiddleware
 from routes import router as main_router
+<<<<<<< HEAD
+from mlmodel import get_prediction
+
+# app=FastAPI()
+=======
 app=FastAPI()
+>>>>>>> upstream/main
 app = FastAPI(title="FleetFlow", version="1.0.0")
 
 
@@ -16,3 +25,16 @@ app.add_middleware(
 )
 app.include_router(auth_router)
 app.include_router(main_router)
+<<<<<<< HEAD
+
+
+@app.post("/predict")
+def predict_endpoint(data:dataInput):
+    finalFare = get_prediction(data)
+
+    return {
+        "status":"success",
+        "prediction":finalFare
+    }
+=======
+>>>>>>> upstream/main

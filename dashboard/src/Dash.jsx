@@ -11,6 +11,11 @@ const Dashboard = ({user}) => {
   }
 
   return (
+<<<<<<< HEAD
+    <div className="dashboard-container">
+      
+      {/* Header */}
+=======
     <div className="layout">
       
       
@@ -32,12 +37,18 @@ const Dashboard = ({user}) => {
       {/* User Info Card */}
       <div className="main-content">
         {/* Header */}
+>>>>>>> upstream/main
       <div className="dashboard-header">
         <h2>Welcome, {data.name || data.user?.name}</h2>
         <button className="logout-btn" onClick={handleLogout}>
           Logout
         </button>
       </div>
+<<<<<<< HEAD
+
+      {/* User Info Card */}
+=======
+>>>>>>> upstream/main
       <div className="card">
         <h3>Profile Information</h3>
         <div className="info-row">
@@ -53,7 +64,10 @@ const Dashboard = ({user}) => {
           <span>{data.user_id || data.user?.id}</span>
         </div>
       </div>
+<<<<<<< HEAD
+=======
       </div>
+>>>>>>> upstream/main
 
     </div>
   );
