@@ -1,5 +1,5 @@
 
 def fare(a:float , b:float):
-    return a+b
+    return a-b
 
 
