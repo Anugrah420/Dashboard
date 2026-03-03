@@ -1,5 +1,6 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr 
 from datetime import date
+from typing import List
 
 class UserCreate(BaseModel):
     email: EmailStr
@@ -20,3 +21,5 @@ class dataInput(BaseModel):
     num1:float
     num2:float
 
+class AuthData(BaseModel):
+    roles:List[str]

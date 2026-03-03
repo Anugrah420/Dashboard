@@ -1,0 +1,61 @@
+.main-container {
+  padding: 30px;
+  background-color: #0D1B2A;
+  min-height: 100vh;
+  color: white;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: #B56576;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card, .form-card, .patient-list {
+  background-color: #1B263B;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.addPatient {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.addPatient input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  flex: 1;
+}
+
+.addPatient button {
+  background-color: #415A77;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.patient-list ul {
+  list-style: none;
+  padding: 0;
+}
