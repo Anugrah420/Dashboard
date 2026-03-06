@@ -1,7 +1,13 @@
 from fastapi import APIRouter, Depends,HTTPException
 from config import supabase
 from auth_verify import get_current_user
-router = APIRouter()
+from mlmodel import get_prediction
+from models import dataInput,appointmentData
+
+router = APIRouter(
+        dependencies = [Depends(get_current_user)]
+)
+# we will still keep the depends(get_current user ) if we wanna use the user objects
 
 @router.get('/dashboard')
 def dashboard(user = Depends(get_current_user)):
@@ -16,3 +22,21 @@ def dashboard(user = Depends(get_current_user)):
         "user": payload.data
     }
 
+# we dont wanna use user object here so we can skip the depends code and the router will still be dependenct on get_current user
+@router.post("/predict")
+def predict_endpoint(data:dataInput):
+        finalFare = get_prediction(data)
+        return{
+                "status":"success",
+                "prediction":finalFare
+        }
+
+@router.post("/appointment")
+def book_appointment(data:appointmentData,user=Depends(get_current_user)):
+        appointmentData = createAppointment(data,user)
+        response=supabase.table("appointments").insert(appointmentData).execute()
+        return{
+                "status":"success",
+                "message":"Appointment Booked",
+                "details":response.data
+        }

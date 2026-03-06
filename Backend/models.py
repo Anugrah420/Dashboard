@@ -1,5 +1,6 @@
 from pydantic import BaseModel, EmailStr
-from datetime import date
+from datetime import datetime,datehttp://localhost:5173/predict
+
 
 class UserCreate(BaseModel):
     email: EmailStr
@@ -20,3 +21,8 @@ class dataInput(BaseModel):
     num1:float
     num2:float
 
+class appointmentData(BaseModel):
+    shop_id:str
+    service_type:str
+    appointment_date:datetime
+    notes:str =None
