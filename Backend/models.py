@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr
-from datetime import datetime,datehttp://localhost:5173/predict
+from datetime import datetime,date
 
 
 class UserCreate(BaseModel):
@@ -26,3 +26,6 @@ class appointmentData(BaseModel):
     service_type:str
     appointment_date:datetime
     notes:str =None
+    status:str="Pending"
+
+  

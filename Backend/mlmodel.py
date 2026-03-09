@@ -9,13 +9,13 @@ def get_prediction(data:dataInput):
     return result
 
 
-def createAppointment(data:createAppointment,user):
+def createAppointment(data:appointmentData,user):
     appointment_data = {
         "user_id": user.id,
         "shop_id": data.shop_id,
-        "service": data.service_type,
-        "scheduled_at": data.appointment_date.isoformat(),
-        "status": "pending",
+        "service_type": data.service_type,
+        "appointment_date": data.appointment_date.isoformat(),
+        "status": data.status,
         "notes": data.notes
     }
     return appointment_data

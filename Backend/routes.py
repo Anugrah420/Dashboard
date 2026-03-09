@@ -1,7 +1,8 @@
 from fastapi import APIRouter, Depends,HTTPException
-from config import supabase
+from config import supabase,supabase_admin
+
 from auth_verify import get_current_user
-from mlmodel import get_prediction
+from mlmodel import get_prediction,createAppointment
 from models import dataInput,appointmentData
 
 router = APIRouter(
@@ -40,3 +41,4 @@ def book_appointment(data:appointmentData,user=Depends(get_current_user)):
                 "message":"Appointment Booked",
                 "details":response.data
         }
+
