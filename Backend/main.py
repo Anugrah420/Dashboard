@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from login import router as auth_router
 from fastapi.middleware.cors import CORSMiddleware
 from routes import router as main_router
+from auth_verify import get_current_user
 
 app=FastAPI()
 app = FastAPI(title="FleetFlow", version="1.0.0")
